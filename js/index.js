@@ -3,7 +3,7 @@ function login() {
     const password_empty = document.getElementById("input-password").value === "";
     
     if (!email_empty && !password_empty) {
-        // window.location.href = "todo.html";
+        window.location.href = "todo.html";
     } else {
         if (email_empty) showError("input-email", "email-empty-error", "mb-16px");
         if (password_empty) showError("input-password", "password-empty-error", "mb-24px");
@@ -15,8 +15,8 @@ function register() {
     const nickname_empty = document.getElementById("input-nickname").value === "";
     const password_empty = document.getElementById("input-password").value === "";
     const confirm_password_empty = document.getElementById("input-confirm-password").value === "";
-    if (!email_empty && !password_empty) {
-        // window.location.href = "todo.html";
+    if (!email_empty && !nickname_empty && !password_empty && !confirm_password_empty) {
+        window.location.href = "todo.html";
     } else {
         if (email_empty) showError("input-email", "email-empty-error", "mb-16px");
         if (nickname_empty) showError("input-nickname", "nickname-empty-error", "mb-16px");

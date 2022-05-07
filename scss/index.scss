@@ -16,7 +16,7 @@ img {
     align-items: center;
 
     background-color: $primary;
-    width: 1028px;
+    max-width: 1028px;
     height: 622px;
 
     h1 {
@@ -31,12 +31,12 @@ img {
     justify-content: space-between;
     align-items: center;
     h1 {
-        margin: 16px 32px;
+        margin: 16px 0px 16px 32px;
         font-size: 24px;
     }
 
     .right-nav {
-        margin: 16px 32px;
+        margin: 16px 32px 16px 0px;
         font-size: 16px;
         .user-todo {
             margin-right: 24px;
@@ -63,13 +63,14 @@ img {
 }
 
 .todo {
-    width: 1028px;
+    max-width: 1028px;
     height: 736px;
     background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
 }
 
 .todo-main {
-    width: 500px;
+    max-width: 500px;
+    transition: all ease 0.3s;
 
     .input-todo {
         position: relative;
@@ -97,7 +98,7 @@ img {
             border-bottom: 2px solid #EFEFEF;
             color: #9F9A91;
 
-            transition: border-bottom ease 0.3s;
+            transition: border-bottom ease 0.3s, color ease 0.3s;
         }
 
         .active {
@@ -180,6 +181,10 @@ img {
     opacity: 1;
 }
 
+.category:hover {
+    color: $secondary !important;
+}
+
 
 .todo-box {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -189,8 +194,8 @@ img {
 
 .login, .register {
     width: 304px;
+    transition: all ease 0.3s;
 }
-
 
 .container {
     margin: 0 auto;
@@ -233,6 +238,7 @@ h2 {
         line-height: 23px;
         width: 100%;
         box-sizing: border-box;
+        transition: all ease 0.3s;
     }
     
     input:is([type="button"]) {
@@ -289,4 +295,23 @@ h2 {
 
 .d-none {
     display: none !important;
+}
+
+
+@media(max-width: 830px) {
+    .banner {
+        display: none;
+    }
+    .user-todo {
+        display: none;
+    }
+    .todo-main {
+        max-width: 311px;
+    }
+    .delete {
+        display: block !important;
+    }
+    .todo {
+        background: $primary;
+    }
 }

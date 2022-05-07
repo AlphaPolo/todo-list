@@ -18,7 +18,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: #FFD370;
-  width: 1028px;
+  max-width: 1028px;
   height: 622px;
 }
 
@@ -41,12 +41,12 @@ img {
 }
 
 .header h1 {
-  margin: 16px 32px;
+  margin: 16px 0px 16px 32px;
   font-size: 24px;
 }
 
 .header .right-nav {
-  margin: 16px 32px;
+  margin: 16px 32px 16px 0px;
   font-size: 16px;
 }
 
@@ -76,13 +76,15 @@ img {
 }
 
 .todo {
-  width: 1028px;
+  max-width: 1028px;
   height: 736px;
   background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
 }
 
 .todo-main {
-  width: 500px;
+  max-width: 500px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .todo-main .input-todo {
@@ -118,8 +120,8 @@ img {
   font-family: "Noto Sans TC", serif;
   border-bottom: 2px solid #EFEFEF;
   color: #9F9A91;
-  -webkit-transition: border-bottom ease 0.3s;
-  transition: border-bottom ease 0.3s;
+  -webkit-transition: border-bottom ease 0.3s, color ease 0.3s;
+  transition: border-bottom ease 0.3s, color ease 0.3s;
 }
 
 .todo-main .todo-header .active {
@@ -215,6 +217,10 @@ img {
   opacity: 1;
 }
 
+.category:hover {
+  color: #333333 !important;
+}
+
 .todo-box {
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -224,6 +230,8 @@ img {
 
 .login, .register {
   width: 304px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .container {
@@ -264,6 +272,8 @@ h2 {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .login input:is([type="button"]), .register input:is([type="button"]), .todo-main input:is([type="button"]) {
@@ -335,5 +345,23 @@ h2 {
 
 .d-none {
   display: none !important;
+}
+
+@media (max-width: 830px) {
+  .banner {
+    display: none;
+  }
+  .user-todo {
+    display: none;
+  }
+  .todo-main {
+    max-width: 311px;
+  }
+  .delete {
+    display: block !important;
+  }
+  .todo {
+    background: #FFD370;
+  }
 }
 /*# sourceMappingURL=index.css.map */
