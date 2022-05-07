@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Zilla+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap");
+
+$primary: #FFD370;
+$secondary: #333333;
+
+$font_primary: "Noto Sans TC", serif;
+
+img {
+    user-select: none;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $primary;
+    width: 1028px;
+    height: 622px;
+
+    h1 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 50.5px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        margin: 16px 32px;
+        font-size: 24px;
+    }
+
+    .right-nav {
+        margin: 16px 32px;
+        font-size: 16px;
+        .user-todo {
+            margin-right: 24px;
+            font-family: $font_primary;
+            font-weight: bold;
+            a {
+                color: $secondary;
+                text-decoration: none;
+            }
+        }
+        .btn-logout {
+            font-family: $font_primary;
+            a {
+                color: $secondary;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#empty-background {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    width: 1028px;
+    height: 736px;
+    background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
+}
+
+.todo-main {
+    width: 500px;
+
+    .input-todo {
+        position: relative;
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.15);
+        .btn-add {
+            cursor: pointer;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            bottom: 4px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .todo-header {
+        margin-top: 16px;
+        display: flex;
+        .category {
+            cursor: pointer;
+            flex: 1;
+            padding: 16px 0 16px 0;
+            text-align: center;
+            font-family: $font_primary;
+            border-bottom: 2px solid #EFEFEF;
+            color: #9F9A91;
+
+            transition: border-bottom ease 0.3s;
+        }
+
+        .active {
+            color: $secondary;
+            border-bottom: 2px solid $secondary;
+        }
+    }
+
+    #todo-list {
+        padding: 6px 0px 0px;
+        box-sizing: border-box;
+
+        .todo-item {
+            color: $secondary;
+            display: flex;
+            padding: 0px 0px 0px 24px;
+            font-size: 14px;
+            font-family: $font_primary;
+            color: $secondary;
+            span {
+                cursor: pointer;
+                img {
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 20px;
+                }
+                display: flex;
+                align-items: center;
+                width: 428px;
+                border-bottom: 1px solid #E5E5E5;
+            }
+        }
+
+        .check {
+            text-decoration: line-through;
+            color: #9F9A91;
+        }
+    }
+
+    .todo-footer {
+        padding: 8px 48px 8px 24px;
+        font-size: 14px;
+        font-family: $font_primary;
+
+        .content {
+            padding: 16px 0px 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #wait-for-complete {
+            color: $secondary;
+        }
+
+        .clear-completed {
+            cursor: pointer;
+            color: #9F9A91;
+        }
+    }
+}
+
+.todo-item .delete {
+    cursor: pointer;
+    opacity: 0;
+    width: 52px;
+    height: 52px;
+    padding: 20px 17px;
+    transition: opacity ease 0.3s;
+    box-sizing: border-box;
+}
+
+.todo-item:hover .delete {
+    opacity: 1;
+}
+
+
+.todo-box {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.login, .register {
+    width: 304px;
+}
+
+
+.container {
+    margin: 0 auto;
+}
+
+h1 {
+    img {
+        vertical-align: middle;
+    }
+    text-align: center;
+    font-family: "Baloo Thambi 2", serif;
+    color: $secondary;
+}
+
+
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-family: $font_primary;
+    font-weight: bold;
+    color: $secondary;
+    line-height: 34.75px;
+}
+
+.error {
+    margin-top: 4px;
+    display: none;
+
+    color: #D87355;
+    font-family: $font_primary;
+}
+
+.login, .register, .todo-main {
+
+    input:not([type="button"]) {
+        padding: 12px 16px;
+        border: 0;
+        border-radius: 10px;
+        line-height: 23px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    input:is([type="button"]) {
+        margin-left: auto;
+        margin-right: auto;
+
+        cursor: pointer;
+        display: block;
+        background-color: $secondary;
+        border: 0;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: $font_primary;
+        color: #FFF;
+        padding: 12px 48px;
+
+    }
+
+    ::placeholder {
+        font-family: $font_primary;
+        font-size: 16px;
+        color: #9F9A91;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 4px;
+        display: block;
+        font-size: 14px;
+        font-family: $font_primary;
+        color: $secondary;
+    }
+
+    .register {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 16px;
+        font-family: $font_primary;
+        color: $secondary;
+        line-height: 23.17px;
+    }
+}
+
+.mb-16px {
+    margin-bottom: 16px;
+}
+
+.mb-24px {
+    margin-bottom: 24px;
+}
+
+.d-none {
+    display: none !important;
+}

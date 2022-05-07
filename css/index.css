@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Zilla+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap");
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFD370;
+  width: 1028px;
+  height: 622px;
+}
+
+.main h1 {
+  width: 100%;
+  font-size: 32px;
+  line-height: 50.5px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header h1 {
+  margin: 16px 32px;
+  font-size: 24px;
+}
+
+.header .right-nav {
+  margin: 16px 32px;
+  font-size: 16px;
+}
+
+.header .right-nav .user-todo {
+  margin-right: 24px;
+  font-family: "Noto Sans TC", serif;
+  font-weight: bold;
+}
+
+.header .right-nav .user-todo a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.header .right-nav .btn-logout {
+  font-family: "Noto Sans TC", serif;
+}
+
+.header .right-nav .btn-logout a {
+  color: #333333;
+  text-decoration: none;
+}
+
+#empty-background {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo {
+  width: 1028px;
+  height: 736px;
+  background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
+}
+
+.todo-main {
+  width: 500px;
+}
+
+.todo-main .input-todo {
+  position: relative;
+  -webkit-box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.todo-main .input-todo .btn-add {
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.todo-main .todo-header {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-main .todo-header .category {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 16px 0 16px 0;
+  text-align: center;
+  font-family: "Noto Sans TC", serif;
+  border-bottom: 2px solid #EFEFEF;
+  color: #9F9A91;
+  -webkit-transition: border-bottom ease 0.3s;
+  transition: border-bottom ease 0.3s;
+}
+
+.todo-main .todo-header .active {
+  color: #333333;
+  border-bottom: 2px solid #333333;
+}
+
+.todo-main #todo-list {
+  padding: 6px 0px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-main #todo-list .todo-item {
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 0px 0px 24px;
+  font-size: 14px;
+  font-family: "Noto Sans TC", serif;
+  color: #333333;
+}
+
+.todo-main #todo-list .todo-item span {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 428px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.todo-main #todo-list .todo-item span img {
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.todo-main #todo-list .check {
+  text-decoration: line-through;
+  color: #9F9A91;
+}
+
+.todo-main .todo-footer {
+  padding: 8px 48px 8px 24px;
+  font-size: 14px;
+  font-family: "Noto Sans TC", serif;
+}
+
+.todo-main .todo-footer .content {
+  padding: 16px 0px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-main .todo-footer #wait-for-complete {
+  color: #333333;
+}
+
+.todo-main .todo-footer .clear-completed {
+  cursor: pointer;
+  color: #9F9A91;
+}
+
+.todo-item .delete {
+  cursor: pointer;
+  opacity: 0;
+  width: 52px;
+  height: 52px;
+  padding: 20px 17px;
+  -webkit-transition: opacity ease 0.3s;
+  transition: opacity ease 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-item:hover .delete {
+  opacity: 1;
+}
+
+.todo-box {
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.login, .register {
+  width: 304px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Baloo Thambi 2", serif;
+  color: #333333;
+}
+
+h1 img {
+  vertical-align: middle;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-family: "Noto Sans TC", serif;
+  font-weight: bold;
+  color: #333333;
+  line-height: 34.75px;
+}
+
+.error {
+  margin-top: 4px;
+  display: none;
+  color: #D87355;
+  font-family: "Noto Sans TC", serif;
+}
+
+.login input:not([type="button"]), .register input:not([type="button"]), .todo-main input:not([type="button"]) {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  line-height: 23px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login input:is([type="button"]), .register input:is([type="button"]), .todo-main input:is([type="button"]) {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  display: block;
+  background-color: #333333;
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Noto Sans TC", serif;
+  color: #FFF;
+  padding: 12px 48px;
+}
+
+.login ::-webkit-input-placeholder, .register ::-webkit-input-placeholder, .todo-main ::-webkit-input-placeholder {
+  font-family: "Noto Sans TC", serif;
+  font-size: 16px;
+  color: #9F9A91;
+}
+
+.login :-ms-input-placeholder, .register :-ms-input-placeholder, .todo-main :-ms-input-placeholder {
+  font-family: "Noto Sans TC", serif;
+  font-size: 16px;
+  color: #9F9A91;
+}
+
+.login ::-ms-input-placeholder, .register ::-ms-input-placeholder, .todo-main ::-ms-input-placeholder {
+  font-family: "Noto Sans TC", serif;
+  font-size: 16px;
+  color: #9F9A91;
+}
+
+.login ::placeholder, .register ::placeholder, .todo-main ::placeholder {
+  font-family: "Noto Sans TC", serif;
+  font-size: 16px;
+  color: #9F9A91;
+}
+
+.login label, .register label, .todo-main label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+  font-family: "Noto Sans TC", serif;
+  color: #333333;
+}
+
+.login .register, .register .register, .todo-main .register {
+  text-align: center;
+}
+
+.login a, .register a, .todo-main a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Noto Sans TC", serif;
+  color: #333333;
+  line-height: 23.17px;
+}
+
+.mb-16px {
+  margin-bottom: 16px;
+}
+
+.mb-24px {
+  margin-bottom: 24px;
+}
+
+.d-none {
+  display: none !important;
+}
+/*# sourceMappingURL=index.css.map */

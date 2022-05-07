@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="todo">
+        <div class="header">
+            <h1><img src="assets/check.svg" alt="">ONLINE TODO LIST</h1>
+            <div class="right-nav">
+                <span class="user-todo"><a href="">王小明的代辦</a></span>
+                <span class="btn-logout"><a href="">登出</a></span>
+            </div>
+        </div>
+        <div class="todo-main container">
+            <div class="input-todo">
+                <input type="text" name="" id="input-todo-content" placeholder="新增待辦事項">
+                <img class="btn-add" src="assets/add.svg" alt="" onClick="addTodo()">
+            </div>
+            <div class="todo-box">
+                <ul class="todo-header">
+                    <li onClick="switchCategory(this, 0)" class="category active">全部</li>
+                    <li onClick="switchCategory(this, 1)" class="category">待完成</li>
+                    <li onClick="switchCategory(this, 2)" class="category">已完成</li>
+                </ul>
+                <ul id="todo-list">
+                    <li class="todo-item">
+                        <span><img src="/assets/checkbox.svg" alt="">把發霉的檸檬拿去丟</span>
+                        <img class="delete" src="/assets/xmark.svg" alt="">
+                    </li>
+                    <li class="todo-item check">
+                        <span><img src="/assets/checkbox.svg" alt="">打電話叫媽媽匯款給我</span>
+                        <img class="delete" src="/assets/xmark.svg" alt="">
+                    </li>
+                </ul>
+                <div class="todo-footer">
+                    <div class="content">
+                        <span id="wait-for-complete">5個待完成項目</span>
+                        <span class="clear-completed" onClick="clearCompleted()">清除已完成項目</span>
+                    </div>
+                </div>
+            </div>
+            <div id="empty-background" class="d-none">
+                <img src="assets/empty.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/todo.js"></script>
+</html>

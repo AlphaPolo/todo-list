@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="banner container">
+            <h1><img src="assets/check.svg" alt="">ONLINE TODO LIST</h1>
+            <img src="assets/img.png" alt="" class="logo">
+        </div>
+        <div class="register container">
+            <h2>註冊帳號</h2>
+            <form action="">
+                <label for="input-email">Email</label>
+                <input class="mb-16px" type="email" id="input-email" name="input-email" placeholder="請輸入Email">
+                <p class="error mb-16px" id="email-empty-error">此欄位不可為空</p>
+                <label for="input-nickname">您的暱稱</label>
+                <input class="mb-16px" type="text" id="input-nickname" name="input-nickname" placeholder="請輸入您的暱稱">
+                <p class="error mb-16px" id="nickname-empty-error">此欄位不可為空</p>
+                <label for="input-password">密碼</label>
+                <input class="mb-16px" type="password" id="input-password" name="input-password" placeholder="請輸入密碼">
+                <p class="error mb-16px" id="password-empty-error">此欄位不可為空</p>
+                <label for="input-confirm-password">再次輸入密碼</label>
+                <input class="mb-24px" type="password" id="input-confirm-password" name="input-confirm-password" placeholder="請再次輸入密碼">
+                <p class="error mb-24px" id="confirm-password-empty-error">此欄位不可為空</p>
+                <input class="mb-24px" type="button" value="註冊帳號" onClick="register()">
+                <div class="register">
+                    <a href="index.html">登入</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
