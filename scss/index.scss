@@ -59,9 +59,7 @@ img {
 
 #empty-background {
     margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .todo {
@@ -121,10 +119,13 @@ img {
             color: $secondary;
             span {
                 cursor: pointer;
-                img {
+                .checkbox {
                     margin-right: 16px;
                     width: 20px;
                     height: 20px;
+                    background-image: url(/assets/checkbox.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
                 display: flex;
                 align-items: center;
@@ -136,6 +137,10 @@ img {
         .check {
             text-decoration: line-through;
             color: #9F9A91;
+
+            .checkbox {
+                background-image: url(/assets/todo-check.svg) !important;
+            }
         }
     }
 

@@ -113,8 +113,7 @@ function checkList() {
 
     let unFinishCount = todo_list.filter(item => !item.isComplete).length;
     counter.innerText = `${unFinishCount}個待完成項目`;
-
-    console.log("count", unFinishCount);
+    
     if(todo_list.length <= 0) {
         toggleBlock();
     }
@@ -128,16 +127,16 @@ function toggleBlock() {
 }
 
 function itemTemplate(item, index) {
+    // <span onClick="toggleComplete(${item.id})"><img src="${item.isComplete ? assets_todo_check : assets_checkbox}" alt="">${item.content}</span>
     return `
         <li class="todo-item ${item.isComplete ? "check" : ""}">
-            <span onClick="toggleComplete(${item.id})"><img src="${item.isComplete ? assets_todo_check : assets_checkbox}" alt="">${item.content}</span>
+        <span onClick="toggleComplete(${item.id})"><div class="checkbox"></div>${item.content}</span>
             <img onClick="deleteItem(${item.id})" class="delete" src="/assets/xmark.svg" alt="">
         </li>
     `
 }
 
 function toggleComplete(id) {
-    console.log(id);
     let item = todo_list.find((item) => item.id === id);
     item.isComplete ^= true; // toggle boolean
     checkList();
