@@ -17,7 +17,7 @@ img {
 
     background-color: $primary;
     max-width: 1028px;
-    height: 622px;
+    min-height: 622px;
 
     h1 {
         width: 100%;
@@ -64,7 +64,7 @@ img {
 
 .todo {
     max-width: 1028px;
-    height: 736px;
+    min-height: 736px;
     background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
 }
 
@@ -208,6 +208,7 @@ h1 {
     text-align: center;
     font-family: "Baloo Thambi 2", serif;
     color: $secondary;
+    transition: all ease 0.3s;
 }
 
 
@@ -219,6 +220,7 @@ h2 {
     font-weight: bold;
     color: $secondary;
     line-height: 34.75px;
+    transition: all ease 0.3s;
 }
 
 .error {
@@ -299,7 +301,14 @@ h2 {
 
 
 @media(max-width: 830px) {
-    .banner {
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .main {
+        flex-wrap: wrap;
+    }
+    .banner > img{
         display: none;
     }
     .user-todo {
@@ -308,8 +317,8 @@ h2 {
     .todo-main {
         max-width: 311px;
     }
-    .delete {
-        display: block !important;
+    .todo-item .delete {
+        opacity: 1;
     }
     .todo {
         background: $primary;
