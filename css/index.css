@@ -20,6 +20,7 @@ img {
   background-color: #FFD370;
   max-width: 1028px;
   min-height: 622px;
+  padding-bottom: 48px;
 }
 
 .main h1 {
@@ -353,12 +354,19 @@ h2 {
 
 @media (max-width: 830px) {
   h2 {
+    margin-bottom: 32px;
     font-size: 20px;
     text-align: center;
   }
   .main {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    padding-top: 48px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .banner > img {
     display: none;
